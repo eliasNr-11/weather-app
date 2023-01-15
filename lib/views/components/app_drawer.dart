@@ -5,7 +5,8 @@ import 'package:weather_app/controllers/search_controller.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({
-    Key? key, required this.cont,
+    Key? key,
+    required this.cont,
   }) : super(key: key);
 
   final SearchController cont;
@@ -29,7 +30,8 @@ class AppDrawer extends StatelessWidget {
                 SizedBox(height: 10.h),
                 Align(
                     alignment: Alignment.center,
-                    child: Text(locations[cont.selectedCity].city, style: textStyle26Bold)),
+                    child: Text(locations[cont.selectedCity].city,
+                        style: textStyle26Bold)),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 20.h),
                   child:
@@ -103,7 +105,7 @@ class AppDrawer extends StatelessWidget {
                   borderRadius: BorderRadius.circular(40.r),
                 ),
               ),
-              for (var i=0; i<locations.length; i++) ...[
+              for (var i = 0; i < locations.length; i++) ...[
                 Padding(
                   padding:
                       EdgeInsets.symmetric(horizontal: 30.w, vertical: 5.h),
@@ -117,10 +119,13 @@ class AppDrawer extends StatelessWidget {
                         ),
                         onTap: () {
                           cont.changeCity(i);
+                          cont.fetchWeather();
                           Navigator.of(context).pop();
                         },
                       ),
-                      Divider(height: 1.h, color: Colors.white)
+                      i + 1 < locations.length
+                          ? Divider(height: 1.h, color: Colors.white)
+                          : const SizedBox()
                     ],
                   ),
                 )

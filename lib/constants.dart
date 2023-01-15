@@ -59,21 +59,19 @@ var textStyle26Bold = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
+var textStyleBigTwo = TextStyle(
+  fontSize: 72.sp,
+  fontFamily: 'Questrial',
+  color: Colors.white,
+  fontWeight: FontWeight.bold,
+);
+
 var textStyleBig = TextStyle(
   fontSize: 92.sp,
   fontFamily: 'Questrial',
   color: Colors.white,
   fontWeight: FontWeight.bold,
 );
-
-// var textStyleBigGoogle = GoogleFonts.poppins(
-//   textStyle: TextStyle(
-//     fontSize: 92.sp,
-//     fontFamily: 'Questrial',
-//     color: Colors.white,
-//     fontWeight: FontWeight.bold,
-//   ),
-// );
 
 List<LocationModel> locations = [
   LocationModel(
@@ -103,7 +101,25 @@ List<LocationModel> locations = [
   LocationModel(
     city: 'San Francisco',
     country: 'USA',
-    lat: 37.7749,
-    long: 122.4194,
+    lat: 37.7,
+    long: 122.4,
   ),
+];
+
+List customColors = [
+  [
+    const Color(0xffE3B447),
+    const Color(0xffDE7C2F),
+    const Color(0xffE3B447).withOpacity(0.5),
+  ],
+  [
+    const Color(0xff009FFD),
+    const Color(0xFF2529B1),
+    const Color(0xff009FFD).withOpacity(0.3),
+  ],
+  [
+    const Color(0xffB5C0CF),
+    const Color(0xff515672),
+    const Color(0xffB5C0CF).withOpacity(0.5),
+  ],
 ];
