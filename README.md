@@ -22,7 +22,7 @@ Other packages
 
 ## Demo
 
-Insert gif or link to demo
+[demo](https://user-images.githubusercontent.com/78848952/212564512-d7f596ba-53df-4e3a-9969-63db1be405c9.mp4)
 
 
 ## API Reference
